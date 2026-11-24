@@ -1,0 +1,253 @@
+/* VoltSense 5G - Enterprise IoT Energy Management CSS Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg-main: #0F172A;
+    --bg-surface: #1E293B;
+    --bg-surface-elevated: #334155;
+    --border-color: #334155;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --brand-blue: #2563EB;
+    --brand-blue-glow: rgba(37, 99, 235, 0.25);
+    --brand-cyan: #06B6D4;
+    --brand-cyan-glow: rgba(6, 182, 212, 0.25);
+    --status-emerald: #10B981;
+    --status-emerald-glow: rgba(16, 185, 129, 0.25);
+    --status-amber: #F59E0B;
+    --status-rose: #EF4444;
+}
+
+/* Global Font and Body Tweaks */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Streamlit Header & Margin Fixes */
+.block-container {
+    padding-top: 1.8rem;
+    padding-bottom: 2.5rem;
+    max-width: 96% !important;
+}
+
+/* Header Banner */
+.voltsense-header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #172554 100%);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voltsense-title-box h1 {
+    margin: 0;
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #38BDF8 0%, #818CF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.voltsense-tagline {
+    color: #94A3B8;
+    font-size: 0.95rem;
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+/* Metric / KPI Cards */
+.kpi-card {
+    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.kpi-card:hover {
+    border-color: #38BDF8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.kpi-title {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94A3B8;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #F8FAFC;
+    line-height: 1.2;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.kpi-subtext {
+    font-size: 0.8rem;
+    color: #64748B;
+    margin-top: 6px;
+}
+
+.kpi-badge-positive {
+    color: #10B981;
+    background: rgba(16, 185, 129, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.kpi-badge-warning {
+    color: #F59E0B;
+    background: rgba(245, 158, 11, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.kpi-badge-danger {
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* 5G Status Card */
+.five-g-card {
+    background: #0F172A;
+    border: 1px solid #1E3A8A;
+    border-left: 4px solid #38BDF8;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+}
+
+/* Simulation Disclaimer Banner */
+.simulation-disclaimer {
+    background: rgba(30, 41, 59, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #38BDF8;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+/* Hardware Ready Badge */
+.badge-hw-ready {
+    background: #064E3B;
+    color: #34D399;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid #059669;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Status Dot with Pulse */
+.status-dot {
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot-online {
+    background-color: #10B981;
+    box-shadow: 0 0 8px #10B981;
+}
+
+.status-dot-offline {
+    background-color: #EF4444;
+    box-shadow: 0 0 8px #EF4444;
+}
+
+.status-dot-standby {
+    background-color: #F59E0B;
+    box-shadow: 0 0 8px #F59E0B;
+}
+
+/* Module Section Header */
+.section-header-box {
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.section-header-box h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #F1F5F9;
+    margin: 0;
+}
+
+.section-header-box p {
+    color: #94A3B8;
+    font-size: 0.88rem;
+    margin: 4px 0 0 0;
+}
+
+/* Code Snippet Box */
+.code-container {
+    background: #0B0F19;
+    border: 1px solid #1E293B;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    overflow-x: auto;
+}
+
+/* Custom Table Polish */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.styled-table th {
+    background: #1E293B;
+    color: #94A3B8;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-bottom: 1px solid #334155;
+}
+
+.styled-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    color: #E2E8F0;
+}
+
+.styled-table tr:hover {
+    background: rgba(30, 41, 59, 0.5);
+}
